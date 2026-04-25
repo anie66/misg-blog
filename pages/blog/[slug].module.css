@@ -1,0 +1,133 @@
+.hero {
+  background-color: var(--ink);
+  padding: 3rem 2rem 3.5rem;
+}
+
+.heroInner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: color 0.15s ease;
+}
+
+.back:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+.date {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.625rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: white;
+}
+
+.coverWrap {
+  background-color: var(--ink);
+  padding: 0 2rem 3rem;
+}
+
+.coverInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.body {
+  padding: 3.5rem 2rem;
+}
+
+.bodyInner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 4rem;
+}
+
+.footerDivider {
+  width: 48px;
+  height: 2px;
+  background-color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+.footerCta {
+  background-color: var(--paper);
+  border: 1px solid var(--silver);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footerCta p {
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.footerCtaLink {
+  display: inline-block;
+  background-color: var(--navy);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.footerCtaLink:hover {
+  background-color: #0d47a1;
+}
+
+.backBottom {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.backBottom:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+
+  .coverWrap {
+    padding: 0 1.25rem 2rem;
+  }
+
+  .body {
+    padding: 2.5rem 1.25rem;
+  }
+}
