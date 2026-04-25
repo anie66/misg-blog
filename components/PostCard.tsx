@@ -11,16 +11,6 @@ export default function PostCard({ post }: Props) {
 
   return (
     <Link href={`/blog/${post.slug}`} className={styles.card}>
-      {post.cover_image_path && (
-        <div className={styles.imageWrap}>
-          <img
-            src={post.cover_image_path}
-            alt={post.title}
-            className={styles.image}
-            loading="lazy"
-          />
-        </div>
-      )}
       <div className={styles.body}>
         {date && (
           <time className={styles.date} dateTime={date}>
@@ -33,8 +23,10 @@ export default function PostCard({ post }: Props) {
             {post.excerpt.split('\n')[0]}
           </p>
         )}
-        <span className={styles.readMore}>Read more</span>
+        <span className={styles.readMore}>Read more →</span>
       </div>
     </Link>
+  )
+}
   )
 }
