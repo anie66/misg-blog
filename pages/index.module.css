@@ -1,8 +1,10 @@
 .hero {
-  background-color: var(--ink);
+  background-image: linear-gradient(rgba(15,22,35,0.62), rgba(15,22,35,0.62)),
+    url('https://maidinstgervais.com/assets/hero-chalet-interior-BuNn57wK.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 5rem 2rem 4rem;
 }
-
 .heroInner {
   max-width: 760px;
   margin: 0 auto;
