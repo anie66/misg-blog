@@ -1,41 +1,5 @@
-.hero {
-  background-image: linear-gradient(rgba(15,22,35,0.62), rgba(15,22,35,0.62)),
-    url('https://maidinstgervais.com/assets/hero-chalet-interior-BuNn57wK.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 5rem 2rem 4rem;
-}
-.heroInner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.heroLabel {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.25rem;
-}
-
-.heroTitle {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: white;
-  margin-bottom: 1.5rem;
-}
-
-.heroSub {
-  font-size: 1.0625rem;
-  line-height: 1.75;
-  color: rgba(255,255,255,0.6);
-  max-width: 560px;
-}
-
 .posts {
+  background-color: var(--paper);
   padding: 4rem 2rem;
 }
 
@@ -46,8 +10,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
 
 .empty {
