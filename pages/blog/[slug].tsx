@@ -39,7 +39,6 @@ export default function BlogPost({ post }: Props) {
       url: 'https://maidinstgervais.com',
     },
     url: canonicalUrl,
-    ...(post.cover_image_path && { image: post.cover_image_path }),
   }
 
   return (
@@ -51,17 +50,11 @@ export default function BlogPost({ post }: Props) {
         <meta property="og:description" content={post.excerpt?.split('\n')[0] || post.title} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalUrl} />
-        {post.cover_image_path && (
-          <meta property="og:image" content={post.cover_image_path} />
-        )}
         <meta property="article:published_time" content={date || ''} />
         <meta property="article:modified_time" content={post.updated_at} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt?.split('\n')[0] || post.title} />
-        {post.cover_image_path && (
-          <meta name="twitter:image" content={post.cover_image_path} />
-        )}
         <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
@@ -87,22 +80,13 @@ export default function BlogPost({ post }: Props) {
             </div>
           </div>
 
-          {post.cover_image_path && (
-            <div className={styles.coverWrap}>
-              <div className={styles.coverInner}>
-                <img
-                  src={post.cover_image_path}
-                  alt={post.title}
-                  className={styles.cover}
-                />
-              </div>
-            </div>
-          )}
-
           <div className={styles.body}>
             <div className={styles.bodyInner}>
               <div className="prose">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{ h1: () => null }}
+                >
                   {post.content}
                 </ReactMarkdown>
               </div>
