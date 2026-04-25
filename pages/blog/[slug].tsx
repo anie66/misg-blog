@@ -8,7 +8,7 @@ import Footer from '../../components/Footer'
 import {
   getPostBySlug,
   getAllPublishedSlugs,
-  BlogPost,
+  type BlogPost,
   formatDate,
 } from '../../lib/supabase'
 import styles from './[slug].module.css'
