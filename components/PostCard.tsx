@@ -28,5 +28,3 @@ export default function PostCard({ post }: Props) {
     </Link>
   )
 }
-  )
-}
