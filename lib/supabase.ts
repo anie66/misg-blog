@@ -72,3 +72,8 @@ export function formatDate(dateString: string): string {
     year: 'numeric',
   })
 }
+export function getImageUrl(path: string | null): string | null {
+  if (!path) return null
+  if (path.startsWith('http')) return path
+  return `https://tudkeaibtvjzxhgntlau.supabase.co/storage/v1/object/public/BUCKET_NAME/${path}`
+}
